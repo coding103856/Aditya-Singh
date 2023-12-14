@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+:root {
+  --colordark: rgb(20, 21, 20);
+  --colorlight: rgb(248, 250, 248);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: var(--colordark);
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+
+}
+#check{
+    display: none;
+}
+.menu {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 60px;
+  width: 150px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(241, 239, 239);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons span {
+  cursor: pointer;
+  padding: 5px;
+}
+.banner {
+    background-color: rgb(44, 41, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  
+}
+
+.bannerText {
+  flex: 1;
+  color: var(--colorlight);
+}
+.bannerText h1{
+  margin: 10px;
+}
+.bannerText a {
+    margin: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    color: red;
+    border: 2px solid ;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+  }
+  .bannerText a:hover {
+    background-color: rgb(19, 23, 19);
+    color: white;
+    border: 2px solid var(--colorlight);
+  }
+.bannerImg {
+  flex: 1;
+}
+.bannerImg img {
+  margin: 20px;
+  width: 80%;
+  border-radius: 100px;
+}
+.about{
+  
+  padding: 60px 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(76, 75, 75);
+}
+.head{
+  margin: 30px;
+}
+.head h1{
+  color: rgb(208, 116, 236);
+}
+.head p{
+  color: rgb(188, 138, 138);
+}
+.info{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  width: 400px;
+  height: 250px;
+  
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px;
+  
+}
+.card a:hover {
+  color: rgb(23, 86, 79);
+}
+.info a{
+  text-decoration: none;
+  color: rgb(241, 239, 239);
+  font-size: larger;  
+  text-transform: uppercase;
+  
+}
+.card a:hover {
+  color: rgb(19, 23, 67);
+}
+.points{
+  margin: 20px;
+}
+.p{
+  margin: 10px;
+}
+.skills{
+  display: none;
+}
+
+.achievements{
+  display: none;
+}
+.qualifications{
+  display: none;
+}
+.contact{
+  background-color: grey;
+}
+.me{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px;
+}
+.c{
+  width: 400px;
+  height: 250px;
+  
+  padding: 10px;
+  border-radius: 8px;
+  
+  margin: 30px;
+  
+}
+.h{
+  padding: 100px 100px;
+}
+.input{
+  display: block;
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    background-color: rgb(2, 104, 2);
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+  }
+  nav ul li a {
+    color: rgb(110, 229, 110);
+  }
+  
+  .banner {
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+  html {
+    font-size: 17px;
+  }
+  
+}
+@media only screen and (min-width: 850px) and (max-width: 1250px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  html {
+    font-size: 20px;
+  }
+  
+}
